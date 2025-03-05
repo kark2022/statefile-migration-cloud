@@ -8,17 +8,17 @@ terraform {
     }
   }
   # Update remote backend information
-  # backend "remote" {
-  #   hostname      = "app.terraform.io"
-  #   organization  = "<YOUR-ORG-NAME>"  # Organization should already exists in Terraform Cloud
+   backend "remote" {
+     hostname      = "app.terraform.io"
+     organization  = "<YOUR-ORGANIZATION-NAME"  # Organization should already exists in Terraform Cloud
 
-  #   workspaces {
-  #     name = "<YOUR-WORKSPACE-NAME>"
-  #     # Two cases:
-  #     # Case-1: If workspace already exists, should not have any state files in states tab
-  #     # Case-2: If workspace not exists, during migration it will get created
-  #   }
-  # }
+     workspaces {
+       name = "<YOUR-WORKSTATION-NAME>"
+       # Two cases:
+       # Case-1: If workspace already exists, should not have any state files in states tab
+       # Case-2: If workspace not exists, during migration it will get created
+     }
+   }
 }
 # Provider Block
 provider "aws" {
